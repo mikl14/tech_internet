@@ -197,11 +197,11 @@ a{
 }
 
 .social_link_github{
-    background-image: url("/img/icons/github.svg");
+    background-image: url("/icons/github.svg");
 }
 
 .social_link_telegram{
     margin-left: 20px;
-    background-image: url("/img/icons/telegram.svg");
+    background-image: url("/icons/telegram.svg");
 }
 
