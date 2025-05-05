@@ -1,0 +1,207 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #09A494;
+    --txtColor: #212121;
+}
+
+body{
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.rounded{
+    border-radius: 50%;
+}
+
+.main-nav a{
+    width: 97;
+    height: 36;
+    gap: 10px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;    
+}
+
+.main-nav a::hover{
+    color: var(--green);
+}
+
+.container{
+    min-width: 320px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1{
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 0%;
+    color: var(--txtColor);
+}
+
+.subtitle{
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: var(--green);
+}
+
+h2{
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: var(--txtColor);
+}
+
+button{
+
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+
+    width: 148;
+    height: 36;
+    gap: 10px;
+    border-radius: 8px;
+    border-width: 1px;
+    padding-top: 6px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border: 1px solid var(--green);
+
+}
+
+button:hover{
+    color: white;
+    background-color:var(--green);
+}
+
+.skill-list {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.skill-list dt {
+    margin-bottom: 6px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+.skill-level {
+    margin: 4px 0 20px;
+    padding: 2px;
+    font-size: 0;
+    border: 1px solid var(--blue);
+    border-radius: 16px;
+}
+
+.skill-level div {
+    height: 14px;
+    background-color: var(--yellow);
+    border-radius: 8px;
+}
+
+.progress-bar {
+	margin: 10px 0;
+    width: 100%;
+    height: 18px;
+    background-color: #f3f3f3;
+    position: relative;
+	border-radius: 100px;
+	outline: 1px solid #212121;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    background-color: #00a494;
+    position: absolute;
+	border-radius: 100px;  
+}
+
+
+
+a{
+    width: 161;
+    height: 20;
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--txtColor);
+    text-decoration: none;
+}
+
+.contactsBlock {
+	width: 420px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contactsBlock img {
+	margin: 0 10px;
+}
+
+.contactsBlock a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contactsBlock a:hover{
+	text-decoration: underline;
+	color: #00a494;
+}
+
+.social {
+    width: 330px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	margin-top: 50px;
+}
+.social_block {
+    display: block;
+    width: 50px;
+	height: 50px;
+	outline: 1px solid #00a494;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 50px;
+}
+
+.social div:hover {
+	outline: 1px solid white;
+	background-color: #00a494;
+}
+
+.social_link_github{
+    background-image: url("/img/icons/github.svg");
+}
+
+.social_link_telegram{
+    margin-left: 20px;
+    background-image: url("/img/icons/telegram.svg");
+}
+
