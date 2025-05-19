@@ -1,65 +1,78 @@
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: border-box;
 }
 
 :root {
+    --white: white;
     --green: #09A494;
     --txtColor: #212121;
 }
 
-body{
+body {
     font-family: "Open Sans";
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
 }
 
-.rounded{
+.rounded {
     border-radius: 50%;
 }
 
-.main-nav a{
+.mainNav a {
     width: 97;
     height: 36;
     gap: 10px;
     padding-top: 10px;
     padding-right: 15px;
     padding-bottom: 10px;
-    padding-left: 15px;    
+    padding-left: 15px;
 }
 
-.main-nav a::hover{
+.mainNav a:hover {
     color: var(--green);
 }
 
-.container{
+.container {
     min-width: 320px;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-h1{
+h1 {
     font-family: "Open Sans";
     font-weight: 700;
     font-size: 60px;
-    line-height: 110.00000000000001%;
+    line-height: 1.1;
     letter-spacing: 0%;
     color: var(--txtColor);
 }
 
-.subtitle{
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subtitle {
     font-family: "Open Sans";
     font-weight: 400;
     font-size: 38px;
-    line-height: 120%;
+    line-height: 1.2;
     letter-spacing: 0%;
     color: var(--green);
 }
 
-h2{
+h2 {
     font-family: "Open Sans";
     font-weight: 700;
     font-size: 30px;
@@ -68,7 +81,7 @@ h2{
     color: var(--txtColor);
 }
 
-button{
+button {
 
     padding: 0;
     border: none;
@@ -89,22 +102,29 @@ button{
 
 }
 
-button:hover{
-    color: white;
-    background-color:var(--green);
+button:hover {
+    color: var(--white);
+    background-color: var(--green);
 }
 
-.skill-list {
+.skillList {
     margin: 0;
     padding: 0;
     line-height: 1;
 }
 
-.skill-list dt {
+.skillList dt {
     margin-bottom: 6px;
-    background-position: left;
+    padding-left: 40px;
+    /* Место для иконки */
+    min-height: 30px;
+    /* Высота под иконку */
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    background-position: left center;
     background-repeat: no-repeat;
-    background-size: 30px;
+    background-size: 30px 30px;
 }
 
 .skill-level {
@@ -121,87 +141,137 @@ button:hover{
     border-radius: 8px;
 }
 
-.progress-bar {
-	margin: 10px 0;
+.progressBar {
+    margin: 10px 0;
     width: 100%;
     height: 18px;
     background-color: #f3f3f3;
     position: relative;
-	border-radius: 100px;
-	outline: 1px solid #212121;
+    border-radius: 100px;
+    outline: 1px solid #212121;
 }
 
-.progress-bar-inner {
+.progressBarInner {
     height: 100%;
-    background-color: #00a494;
+    background-color: var(--green);
     position: absolute;
-	border-radius: 100px;  
+    border-radius: 100px;
+}
+
+.javaIcon {
+    background-image: url('../icons/java.svg');
+}
+
+.csharpIcon {
+    background-image: url('../icons/Csharp.svg');
+}
+
+.cppIcon {
+    background-image: url('../icons/cpp.svg');
+}
+
+.cssIcon {
+    background-image: url('../icons/css.svg');
 }
 
 
-
-a{
+a {
     width: 161;
-    height: 20;
+    height: 30;
     font-family: Open Sans;
     font-weight: 400;
     font-size: 20px;
-    line-height: 100%;
+    line-height: 1;
     letter-spacing: 0%;
     color: var(--txtColor);
     text-decoration: none;
 }
 
 .contactsBlock {
-	width: 420px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+    width: 420px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.phoneLink,
+.emailLink {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 40px;
+    min-height: 30px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px 30px;
+    overflow: visible;
+}
+
+.phoneLink {
+    background-image: url('../icons/phone.svg');
+}
+
+.emailLink {
+    background-image: url('../icons/email.svg');
+}
+
 
 .contactsBlock img {
-	margin: 0 10px;
+    margin: 0 10px;
 }
 
-.contactsBlock a{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.contactsBlock a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.contactsBlock a:hover{
-	text-decoration: underline;
-	color: #00a494;
+.contactsBlock a:hover {
+    text-decoration: none;
+    color: var(--green);
 }
 
 .social {
     width: 330px;
-	height: 50px;
-	display: flex;
-	align-items: center;
-	margin-top: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
 }
-.social_block {
+
+.socialBlock {
     display: block;
     width: 50px;
-	height: 50px;
-	outline: 1px solid #00a494;
-	background-position: center;
-	background-repeat: no-repeat;
-	border-radius: 50px;
+    height: 50px;
+    outline: 1px solid var(--green);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
 }
 
-.social div:hover {
-	outline: 1px solid white;
-	background-color: #00a494;
+.social a:hover {
+    outline: 1px solid var(--white);
+    background-color: var(--green);
 }
 
-.social_link_github{
+.socialLinkGithub {
     background-image: url("../icons/github.svg");
+    text-decoration: none;
 }
 
-.social_link_telegram{
+.socialLinkTelegram {
     margin-left: 20px;
     background-image: url("../icons/telegram.svg");
+    text-decoration: none;
 }
 
+footer {
+    width: 100%;
+    margin-top: 5%;
+    padding-top: 50px;
+    padding-right: 244px;
+    padding-bottom: 50px;
+    padding-left: 244px;
+    gap: 10px;
+    background: var(--txtColor);
+    color: var(--white);
+}
