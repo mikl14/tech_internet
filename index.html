@@ -30,12 +30,10 @@
       </div>
     </header>
     <main>
-      <section>
-        <div id="name">
-          <h1>Михаил Елистратов</h1>
-          <p class="subtitle">Программист</p>
-          <img height="400" class="rounded" src="img/ava.jpg" alt="Аватар пользователя">
-        </div>
+      <section id="name">
+        <h1>Михаил Елистратов</h1>
+        <p class="subtitle">Программист</p>
+        <img height="400" class="rounded" src="img/ava.jpg" alt="Аватар пользователя">
       </section>
 
       <section id="about" class="about">
@@ -59,35 +57,37 @@
       </section>
 
       <section id="skills" class="skills">
-        <div id="header">
+        <div class="skillsHeader">
           <h2>Мои навыки</h2>
-          <div id="right">
+          <div class="skillsHeaderRight">
             <div>Сортировать</div>
             <button>по названию</button>
             <button>по уровню</button>
           </div>
         </div>
+      </section>
 
-        <dl class="skillList">
-          <dt class="javaIcon">Java</dt>
-          <dd class="progressBar">
-            <div class="progressBarInner" style="width: 70%"></div>
-          </dd>
-          <dt class="csharpIcon">C#</dt>
-          <dd class="progressBar">
-            <div class="progressBarInner" style="width: 30%"></div>
-          </dd>
-          <dt class="cppIcon">C++</dt>
-          <dd class="progressBar">
-            <div class="progressBarInner" style="width: 30%"></div>
-          </dd>
-          <dt class="cssIcon">CSS</dt>
-          <dd class="progressBar">
-            <div class="progressBarInner" style="width: 5%"></div>
-          </dd>
-        </dl>
 
-        <p>Программист</p>
+      <dl class="skillList">
+        <dt class="javaIcon">Java</dt>
+        <dd class="progressBar">
+          <div class="progressBarInner" style="width: 70%"></div>
+        </dd>
+        <dt class="csharpIcon">C#</dt>
+        <dd class="progressBar">
+          <div class="progressBarInner" style="width: 30%"></div>
+        </dd>
+        <dt class="cppIcon">C++</dt>
+        <dd class="progressBar">
+          <div class="progressBarInner" style="width: 30%"></div>
+        </dd>
+        <dt class="cssIcon">CSS</dt>
+        <dd class="progressBar">
+          <div class="progressBarInner" style="width: 5%"></div>
+        </dd>
+      </dl>
+
+      <p>Программист</p>
       </section>
 
       <section id="interests" class="interests">
@@ -116,10 +116,9 @@
     </main>
   </div>
 
-  <footer class="main-footer">
+  <footer class="mainFooter">
     <div class="container">© 2025 Михаил Елистратов </div>
   </footer>
 
 </body>
-
 </html>

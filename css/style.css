@@ -22,13 +22,10 @@ body {
 }
 
 .mainNav a {
-    width: 97;
-    height: 36;
+    width: 97vh;
+    height: 36vh;
     gap: 10px;
-    padding-top: 10px;
-    padding-right: 15px;
-    padding-bottom: 10px;
-    padding-left: 15px;
+    padding: 10px 15px;
 }
 
 .mainNav a:hover {
@@ -47,17 +44,16 @@ h1 {
     font-weight: 700;
     font-size: 60px;
     line-height: 1.1;
-    letter-spacing: 0%;
     color: var(--txtColor);
 }
 
-#header {
+.skillsHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#right {
+.skillsHeaderRight {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -68,7 +64,6 @@ h1 {
     font-weight: 400;
     font-size: 38px;
     line-height: 1.2;
-    letter-spacing: 0%;
     color: var(--green);
 }
 
@@ -77,23 +72,19 @@ h2 {
     font-weight: 700;
     font-size: 30px;
     line-height: 120%;
-    letter-spacing: 0%;
     color: var(--txtColor);
 }
 
 button {
 
-    padding: 0;
+    padding: 8px 24px;
     border: none;
     color: inherit;
     background-color: transparent;
     cursor: pointer;
 
-    width: 148;
-    height: 36;
     gap: 10px;
     border-radius: 8px;
-    border-width: 1px;
     padding-top: 6px;
     padding-right: 10px;
     padding-bottom: 10px;
@@ -176,8 +167,7 @@ button:hover {
 
 
 a {
-    width: 161;
-    height: 30;
+    padding: 6px 20px;
     font-family: Open Sans;
     font-weight: 400;
     font-size: 20px;
@@ -188,10 +178,11 @@ a {
 }
 
 .contactsBlock {
-    width: 420px;
+    padding: 0 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 10px;
 }
 
 .phoneLink,
@@ -231,8 +222,7 @@ a {
 }
 
 .social {
-    width: 330px;
-    height: 50px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     margin-top: 50px;
@@ -245,7 +235,7 @@ a {
     outline: 1px solid var(--green);
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 50px;
+    border-radius: 50%;
 }
 
 .social a:hover {
@@ -264,7 +254,7 @@ a {
     text-decoration: none;
 }
 
-footer {
+.mainFooter {
     width: 100%;
     margin-top: 5%;
     padding-top: 50px;
@@ -272,6 +262,10 @@ footer {
     padding-bottom: 50px;
     padding-left: 244px;
     gap: 10px;
+}
+
+footer {
+
     background: var(--txtColor);
     color: var(--white);
 }
