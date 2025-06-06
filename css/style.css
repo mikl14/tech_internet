@@ -22,9 +22,6 @@ body {
 }
 
 .mainNav a {
-    width: 97vh;
-    height: 36vh;
-    gap: 10px;
     padding: 10px 15px;
 }
 
@@ -77,7 +74,6 @@ h2 {
 
 button {
 
-    padding: 8px 24px;
     border: none;
     color: inherit;
     background-color: transparent;
@@ -257,10 +253,7 @@ a {
     width: 100%;
     margin-top: 5%;
     padding-top: 50px;
-    padding-right: 244px;
     padding-bottom: 50px;
-    padding-left: 244px;
-    gap: 10px;
 }
 
 footer {
