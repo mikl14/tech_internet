@@ -16,13 +16,25 @@ body {
     font-weight: 400;
     line-height: 1.5;
 }
-
+.mainHeader
+{
+    display: flex;
+    padding-top: 60px;
+    gap:40px;
+    align-items: center;
+    margin-bottom: 120px;
+}
 .rounded {
     border-radius: 50%;
 }
 
+.mainNav{
+    display: flex;
+}
 .mainNav a {
+    display: flex;
     padding: 10px 15px;
+    align-items: center;
 }
 
 .mainNav a:hover {
@@ -44,17 +56,73 @@ h1 {
     color: var(--txtColor);
 }
 
+h2 {
+    margin: 0 0 40px 0;
+}
+
 .skillsHeader {
     display: flex;
-    align-items: center;
+    align-items: flex-start; 
     justify-content: space-between;
+    margin-bottom: 40px; 
+    width: 100%; 
+}
+
+.skillsHeader h2 {
+    margin: 0; 
+    padding: 0;
+    line-height: 1;
 }
 
 .skillsHeaderRight {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 0; 
+    padding: 0;
 }
+.userContainer
+{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 120px;
+}
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.textWrapper {
+    max-width: 800px;
+}
+  
+.about{
+    margin-bottom: 120px;
+}
+
+.skills{
+    margin-bottom: 120px; 
+}
+
+.interests{
+    margin-bottom: 120px; 
+}
+
+p{
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+p:last-child{
+    margin: 0;
+}
+
+.textContainer h1{
+    margin: 0;
+}
+
 
 .subtitle {
     font-family: "Open Sans";
@@ -71,6 +139,7 @@ h2 {
     line-height: 120%;
     color: var(--txtColor);
 }
+
 
 button {
 
@@ -103,9 +172,7 @@ button:hover {
 .skillList dt {
     margin-bottom: 6px;
     padding-left: 40px;
-    /* Место для иконки */
     min-height: 30px;
-    /* Высота под иконку */
     display: flex;
     align-items: center;
     font-size: 1.1em;
@@ -173,7 +240,6 @@ a {
 }
 
 .contactsBlock {
-    padding: 0 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -217,10 +283,9 @@ a {
 }
 
 .social {
-    padding: 10px 20px;
     display: flex;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .socialBlock {

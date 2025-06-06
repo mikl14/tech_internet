@@ -18,10 +18,10 @@
 
 <body>
   <div class="container">
-    <header class="main-header">
+    <header class="mainHeader">
       <div>
-        <img class="rounded" alt="mainLogo alt text" src="img/mainLogo.png" height="100">
-        <nav class="mainNav">
+          <nav class="mainNav">
+          <img class="rounded" alt="mainLogo alt text" src="img/mainLogo.png" height="60">
           <a href="#about">Обо мне</a>
           <a href="#skills">Навыки</a>
           <a href="#interests">Интересы</a>
@@ -31,12 +31,17 @@
     </header>
     <main>
       <section id="name">
-        <h1>Михаил Елистратов</h1>
-        <p class="subtitle">Программист</p>
-        <img height="400" class="rounded" src="img/ava.jpg" alt="Аватар пользователя">
+        <div class="userContainer">
+          <div class="textContainer">
+            <h1>Михаил Елистратов</h1>
+            <p class="subtitle">Программист</p> 
+          </div>
+          <img height="400" class="rounded" src="img/ava.jpg" alt="Аватар пользователя" style="width: 400px; height: 400px; object-fit: cover;">
+        </div>
       </section>
 
       <section id="about" class="about">
+        <div class="textWrapper">
         <h2>Пара слов обо мне</h2>
         <p>Привет ✌</p>
         <p>
@@ -54,6 +59,7 @@
           но в будущем планирую стать разработчиком сложных программных
           комплексов и систем.
         </p>
+        </div>
       </section>
 
       <section id="skills" class="skills">
