@@ -1,134 +1,140 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="сайт портфолио для мф мгту" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="css/normilize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="сайт портфолио для мф мгту">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Портфолио</title>
-  <link rel="stylesheet" href="css/normilize.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-    rel="stylesheet">
-
-</head>
-
-<body>
-  <div class="container">
-    <header class="mainHeader">
-          <div class="mainHeaderWrap">
-            <a><img class="rounded" alt="mainLogo alt text" src="img/mainLogo.png"></a>
-              <button class="navBtn navBtnClose">
-                <span class="visuallyHidden">Закрыть меню</span>
-              </button>
-          </div>
+  <body>
+    <div class="container">
+      <header class="mainHeader">
+        <div class="mainHeaderWrap">
+          <a
+            ><img
+              class="rounded"
+              alt="mainLogo alt text"
+              src="img/mainLogo.png"
+          /></a>
+          <button class="navBtn navBtnClose">
+            <span class="visuallyHidden">Закрыть меню</span>
+          </button>
+        </div>
         <nav class="mainNav">
           <a href="#about">Обо мне</a>
           <a href="#skills">Навыки</a>
           <a href="#interests">Интересы</a>
           <a href="#contacts">Контакты</a>
         </nav>
-    </header>
-    <main>
-      <section id="name">
-        <div class="userContainer">
-          <div class="textContainer">
-            <h1>Михаил Елистратов</h1>
-            <p class="subtitle">Программист</p> 
+      </header>
+      <main>
+        <section id="name">
+          <div class="userContainer">
+            <div class="textContainer">
+              <h1>Михаил Елистратов</h1>
+              <p class="subtitle">Программист</p>
+            </div>
+            <img
+              height="400"
+              class="avaRounded"
+              src="img/ava.jpg"
+              alt="Аватар пользователя"
+            />
           </div>
-          <img height="400" class="avaRounded" src="img/ava.jpg" alt="Аватар пользователя">
-        </div>
-      </section>
+        </section>
 
-      <section id="about" class="about">
-        <div class="textWrapper">
-        <h2>Пара слов обо мне</h2>
-        <p>Привет ✌</p>
-        <p>
-          В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана по
-          направлению «Информатика и вычисли­тельная техника».
-        </p>
-        <p>
-          В прошлом году защитил диплом бакалавра на тему «Разработка очень
-          сложного программного комплекса для супер-важной цели». Работа была
-          высоко оценена комиссией.
-        </p>
+        <section id="about" class="about">
+          <div class="textWrapper">
+            <h2>Пара слов обо мне</h2>
+            <p>Привет ✌</p>
+            <p>
+              В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана
+              по направлению «Информатика и вычисли­тельная техника».
+            </p>
+            <p>
+              В прошлом году защитил диплом бакалавра на тему «Разработка очень
+              сложного программного комплекса для супер-важной цели». Работа
+              была высоко оценена комиссией.
+            </p>
 
-        <p>
-          Также я уже успел поработать инженером в одном провайдере в Пушкино,
-          но в будущем планирую стать разработчиком сложных программных
-          комплексов и систем.
-        </p>
-        </div>
-      </section>
-
-      <section id="skills" class="skills">
-        <div class="skillsHeader">
-          <h2>Мои навыки</h2>
-          <div class="skillsHeaderRight">
-            <div>Сортировать</div>
-            <button>по названию</button>
-            <button>по уровню</button>
+            <p>
+              Также я уже успел поработать инженером в одном провайдере в
+              Пушкино, но в будущем планирую стать разработчиком сложных
+              программных комплексов и систем.
+            </p>
           </div>
-        </div>
+        </section>
 
+        <section id="skills" class="skills">
+          <div class="skillsHeader">
+            <h2>Мои навыки</h2>
+            <div class="skillsHeaderRight">
+              <div>Сортировать</div>
+              <button>по названию</button>
+              <button>по уровню</button>
+            </div>
+          </div>
 
-      <dl class="skillList">
-        <dt class="javaIcon">Java</dt>
-        <dd class="progressBar">
-          <div class="progressBarInner" style="width: 70%"></div>
-        </dd>
-        <dt class="csharpIcon">C#</dt>
-        <dd class="progressBar">
-          <div class="progressBarInner" style="width: 30%"></div>
-        </dd>
-        <dt class="cppIcon">C++</dt>
-        <dd class="progressBar">
-          <div class="progressBarInner" style="width: 30%"></div>
-        </dd>
-        <dt class="cssIcon">CSS</dt>
-        <dd class="progressBar">
-          <div class="progressBarInner" style="width: 5%"></div>
-        </dd>
-      </dl>
+          <dl class="skillList">
+            <dt class="javaIcon">Java</dt>
+            <dd class="progressBar">
+              <div class="progressBarInner" style="width: 70%"></div>
+            </dd>
+            <dt class="csharpIcon">C#</dt>
+            <dd class="progressBar">
+              <div class="progressBarInner" style="width: 30%"></div>
+            </dd>
+            <dt class="cppIcon">C++</dt>
+            <dd class="progressBar">
+              <div class="progressBarInner" style="width: 30%"></div>
+            </dd>
+            <dt class="cssIcon">CSS</dt>
+            <dd class="progressBar">
+              <div class="progressBarInner" style="width: 5%"></div>
+            </dd>
+          </dl>
+        </section>
 
+        <section id="interests" class="interests">
+          <div class="textWrapper">
+            <h2>Мои интересы</h2>
+            <p>
+              Наибольший интерес для меня в данный момент представляет
+              программирование и изучение искусственного интеллекта.
+            </p>
+            <p>
+              Но помимо учёбы и работы я также люблю играть на барабанах и
+              читать зарубежную классику.
+            </p>
+          </div>
+        </section>
 
-      </section>
+        <section id="contacts" class="contacts">
+          <h2>Мои контакты</h2>
+          <div class="contactsBlock">
+            <a href="tel:+79991234567" class="phoneLink">+7 999 123-45-67</a>
+            <a href="mailto:email@mail.ru" class="emailLink">email@mail.ru</a>
+          </div>
+          <div class="social">
+            <a href="&" class="socialLinkGithub socialBlock"></a>
+            <a href="&" class="socialLinkTelegram socialBlock"></a>
+          </div>
+        </section>
+      </main>
+    </div>
 
-      <section id="interests" class="interests">
-        <div class="textWrapper">
-        <h2>Мои интересы</h2>
-        <p>
-          Наибольший интерес для меня в данный момент представляет
-          программирование и изучение искусственного интеллекта.
-        </p>
-        <p>
-          Но помимо учёбы и работы я также люблю играть на барабанах и читать
-          зарубежную классику.
-        </p>
-        </div>
-      </section>
-
-      <section id="contacts" class="contacts">
-        <h2>Мои контакты</h2>
-        <div class="contactsBlock">
-          <a href="tel:+79991234567" class="phoneLink">+7 999 123-45-67</a>
-          <a href="mailto:email@mail.ru" class="emailLink">email@mail.ru</a>
-        </div>
-        <div class="social">
-          <a href="&" class="socialLinkGithub socialBlock"></a>
-          <a href="&" class="socialLinkTelegram socialBlock"></a>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <footer class="mainFooter">
-    <div class="container">© 2025 Михаил Елистратов </div>
-  </footer>
-
-</body>
+    <footer class="mainFooter">
+      <div class="container">© 2025 Михаил Елистратов</div>
+    </footer>
+  </body>
 </html>
