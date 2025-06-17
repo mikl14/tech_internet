@@ -383,8 +383,6 @@ footer {
         font-size: 16px;
     }
 
-
-
     .avaRounded{
         width: 250px;
         height: 250px;
@@ -442,8 +440,8 @@ footer {
     .mainNav {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Центрируем ссылки */
-        gap: 10px; /* Отступы между ссылками */
+        align-items: center; 
+        gap: 10px; 
         width: 100%;
     }
 
@@ -451,23 +449,23 @@ footer {
     {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Центрируем ссылки по горизонтали */
+        align-items: center; 
         padding: 20px;
     }
 
     .mainHeaderWrap {
         display: flex;
-        justify-content: space-between; /* Раздвигает элементы по краям */
-        align-items: flex-start; /* Выравнивание по верхнему краю */
+        justify-content: space-between;
+        align-items: flex-start; 
         width: 100%;
-        height: 50px; /* Можно подстроить */
+        height: 50px;
     }
 
         .mainNav {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Центрируем ссылки */
-        gap: 10px; /* Отступы между ссылками */
+        align-items: center; 
+        gap: 10px; 
         width: 100%;
     }
 
@@ -475,17 +473,17 @@ footer {
     {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Центрируем ссылки по горизонтали */
+        align-items: center; 
         padding: 20px;
         margin-bottom: 50px;
     }
 
     .mainHeaderWrap {
         display: flex;
-        justify-content: space-between; /* Раздвигает элементы по краям */
-        align-items: center; /* Выравнивание по верхнему краю */
+        justify-content: space-between; 
+        align-items: center; 
         width: 100%;
-        height: 50px; /* Можно подстроить */
+        height: 50px;
     }
 
     .navBtn {
@@ -528,6 +526,34 @@ footer {
     margin: 0;
     order: 1;
   }
+
+    .mainHeader
+    {
+        margin-bottom: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .mainFooter {
+        margin-top: 50px;
+    }
+
+    .about{
+        margin-bottom: 50px;
+    }
+
+    .skills{
+        margin-bottom: 50px; 
+    }
+
+    .interests{
+        margin-bottom: 50px; 
+    }
+
+    .userContainer
+    {
+        margin-bottom: 50px;
+    }
 }
 
 @media screen and (max-width: 360px){
