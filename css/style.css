@@ -41,6 +41,9 @@ body {
 
 .avaRounded {
     border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
 }
 
 .mainNav{
@@ -51,6 +54,8 @@ body {
     display: flex;
     padding: 10px 15px;
     align-items: center;
+    color: var(--txtColor);
+    text-decoration: none;
 }
 
 .mainNav a:hover {
@@ -361,6 +366,7 @@ footer {
 
     h2{
         font-size: 24px;
+        margin: 0 0 30px 0;
     }
 
     h3{
@@ -377,44 +383,38 @@ footer {
         font-size: 16px;
     }
 
-    .mainNav {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Центрируем ссылки */
-        gap: 10px; /* Отступы между ссылками */
-        width: 100%;
+
+
+    .avaRounded{
+        width: 250px;
+        height: 250px;
     }
 
-    .mainHeader
+     .mainHeader
     {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Центрируем ссылки по горизонтали */
-        padding: 20px;
+        margin-bottom: 80px;
     }
 
-    .mainHeaderWrap {
-        display: flex;
-        justify-content: space-between; /* Раздвигает элементы по краям */
-        align-items: flex-start; /* Выравнивание по верхнему краю */
-        width: 100%;
-        height: 50px; /* Можно подстроить */
+    .mainFooter {
+        margin-top: 80px;
     }
 
-    .navBtn {
-        display: block;
-        width: 30px;
-        height: 30px;
+    .about{
+        margin-bottom: 80px;
     }
 
-    .navBtnClose {
-        background-image: url(../icons/close.svg);
+    .skills{
+        margin-bottom: 80px; 
     }
 
-    .navBtnOpen {
-        background-image: url(../icons/burger.svg);
+    .interests{
+        margin-bottom: 80px; 
     }
 
+    .userContainer
+    {
+        margin-bottom: 80px;
+    }
 }
 
 @media screen and (max-width: 650px){
@@ -463,10 +463,103 @@ footer {
         height: 50px; /* Можно подстроить */
     }
 
+        .mainNav {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Центрируем ссылки */
+        gap: 10px; /* Отступы между ссылками */
+        width: 100%;
+    }
 
+    .mainHeader
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Центрируем ссылки по горизонтали */
+        padding: 20px;
+        margin-bottom: 50px;
+    }
 
+    .mainHeaderWrap {
+        display: flex;
+        justify-content: space-between; /* Раздвигает элементы по краям */
+        align-items: center; /* Выравнивание по верхнему краю */
+        width: 100%;
+        height: 50px; /* Можно подстроить */
+    }
+
+    .navBtn {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+    .navBtnClose {
+        background-image: url(../icons/close.svg);
+    }
+
+    .navBtnOpen {
+        background-image: url(../icons/burger.svg);
+    }
+
+    .subtitle{
+         font-size: 24px;
+    }
+
+  .userContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    justify-content: flex-start;
+  }
+
+  .avaRounded {
+    display: block;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto 0px auto;
+    order: 0;
+  }
+
+  .textContainer {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    order: 1;
+  }
 }
 
 @media screen and (max-width: 360px){
-    
+  .skillsHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .skillsHeader h2 {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+  .skillsHeaderRight {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+  .skillsHeaderRight > div,
+  .skillsHeaderRight > button {
+    width: 100%;
+  }
+  .contactsBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .contactsBlock a {
+    width: 100%;
+    text-align: left;
+    display: block;
+  }
 }
