@@ -171,7 +171,6 @@ button {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
-
   gap: 10px;
   border-radius: 8px;
   padding-top: 6px;
@@ -179,6 +178,7 @@ button {
   padding-bottom: 10px;
   padding-left: 10px;
   border: 1px solid var(--green);
+  color: var(--green);
 }
 
 .skillsHeaderRight button:hover {
@@ -375,14 +375,13 @@ footer {
     height: 250px;
   }
 
-    .subtitle {
+  .subtitle {
     font-size: 28px;
   }
 
-
   .mainHeader {
     margin-bottom: 80px;
-    gap:40px;
+    gap: 40px;
   }
 
   .mainFooter {
@@ -406,9 +405,12 @@ footer {
   }
 
   .contactsBlock a {
-    font-size: 17px;
+    font-size: 16px;
   }
 
+  .contactsBlock {
+    gap: 40px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -452,7 +454,7 @@ footer {
     margin-bottom: 25px;
     padding-top: 30px;
     padding-bottom: 30px;
-    gap:20px;
+    gap: 20px;
   }
 
   .mainHeaderWrap {
@@ -497,6 +499,15 @@ footer {
     font-size: 20px;
   }
 
+  .social {
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .contactsBlock a {
+    font-size: 14px;
+  }
+
   .userContainer {
     flex-direction: column;
     align-items: center;
@@ -522,11 +533,12 @@ footer {
     text-align: center;
     margin: 0;
     order: 1;
-    gap:10px;
+    gap: 10px;
   }
 
   .mainFooter {
     margin-top: 50px;
+    padding-top: 30px;
   }
 
   .about {
@@ -544,6 +556,10 @@ footer {
   .userContainer {
     margin-bottom: 50px;
   }
+
+  .contactsBlock {
+    gap: 40px;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -554,7 +570,6 @@ footer {
   }
   .skillsHeader h2 {
     width: 100%;
-    margin: 0 0 10px 0;
   }
   .skillsHeaderRight {
     display: flex;
@@ -566,6 +581,7 @@ footer {
   .skillsHeaderRight > div,
   .skillsHeaderRight > button {
     width: 100%;
+    padding-bottom: 6px;
   }
   .contactsBlock {
     display: flex;
@@ -577,5 +593,9 @@ footer {
     width: 100%;
     text-align: left;
     display: block;
+  }
+
+  .skillList {
+    margin-top: 25px;
   }
 }
