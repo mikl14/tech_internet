@@ -64,7 +64,7 @@ body {
   max-width: 1280px;
 
   margin: 0 auto;
-  padding: 0 15px 0 26px;
+  padding: 0 20px 0 20px;
 }
 
 h1 {
@@ -99,6 +99,7 @@ h2 {
   align-items: center;
   gap: 20px;
   margin-right: 0px;
+  flex-wrap: wrap;
   padding: 0;
 }
 .userContainer {
@@ -307,6 +308,7 @@ button {
   align-items: center;
   margin-top: 40px;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .socialBlock {
@@ -452,7 +454,7 @@ footer {
     flex-direction: column;
     align-items: center;
     margin-bottom: 25px;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 30px;
     gap: 20px;
   }
@@ -566,7 +568,7 @@ footer {
   .skillsHeader {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
   }
   .skillsHeader h2 {
     width: 100%;
@@ -593,6 +595,7 @@ footer {
     width: 100%;
     text-align: left;
     display: block;
+    padding-top: 9px;
   }
 
   .skillList {
