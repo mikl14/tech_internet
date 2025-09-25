@@ -236,22 +236,6 @@ button {
   border-radius: 100px;
 }
 
-.javaIcon {
-  background-image: url("../icons/java.svg");
-}
-
-.csharpIcon {
-  background-image: url("../icons/Csharp.svg");
-}
-
-.cppIcon {
-  background-image: url("../icons/cpp.svg");
-}
-
-.cssIcon {
-  background-image: url("../icons/css.svg");
-}
-
 .contactsBlock {
   display: flex;
   justify-content: flex-start;
