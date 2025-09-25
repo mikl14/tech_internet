@@ -1,7 +1,7 @@
 const skills = {
   data: [
     { skill: "Java", level: 70, cssClass: "javaIcon", icon: "java.svg" },
-    { skill: "C#", level: 30, cssClass: "csharpIcon", icon: "Сsharp.svg" },
+    { skill: "C#", level: 30, cssClass: "csharpIcon", icon: "Csharp.svg" },
     { skill: "C++", level: 30, cssClass: "cppIcon", icon: "cpp.svg" },
     { skill: "CSS", level: 5, cssClass: "cssIcon", icon: "css.svg" }
   ],
