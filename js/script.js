@@ -33,6 +33,5 @@ const skills = {
   }
 };
 
-// Вызов метода вне объекта
 const skillList = document.querySelector("dl.skillList");
 skills.generateList(skillList);
