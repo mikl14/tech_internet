@@ -7,7 +7,7 @@ const skills = {
   ],
 
   generateList(parentElement) {
-    parentElement.innerHTML = ""; // Очистка родителя перед вставкой
+    parentElement.innerHTML = "";
 
     this.data.forEach(item => {
       const dt = document.createElement("dt");
@@ -22,7 +22,7 @@ const skills = {
       dt.style.backgroundImage = `url('icons/${item.icon}')`;
       dt.style.backgroundRepeat = "no-repeat";
       dt.style.backgroundPosition = "left center";
-      dt.style.paddingLeft = "24px"; // Отступ под иконку
+      dt.style.paddingLeft = "40px";
 
       div.style.width = `${item.level}%`;
 
