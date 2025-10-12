@@ -295,6 +295,12 @@ button {
   flex-wrap: wrap;
 }
 
+dt {
+  background-repeat: no-repeat;
+  background-position: left-center;
+  padding-left: 40px;
+}
+
 .socialBlock {
   display: block;
   width: 50px;
