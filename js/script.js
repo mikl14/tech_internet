@@ -80,26 +80,24 @@ buttons.addEventListener("click", (e) => {
 let menu = document.querySelector("nav.mainNav");
 let navBtn = document.querySelector("button.navBtn");
 
+menu.open = function() {
+  this.classList.remove("mainNavClosed");
+  navBtn.classList.remove("navBtnOpen");
+  navBtn.classList.add("navBtnClose");
+};
+
+menu.close = function() {
+  this.classList.add("mainNavClosed");
+  navBtn.classList.remove("navBtnClose");
+  navBtn.classList.add("navBtnOpen");
+};
+
 navBtn.addEventListener("click", (e) => {
-  if(e.target.classList.contains('navBtnOpen')){
-    openMenu();
-  }
-  else
-  {
-    closeMenu();
+  if (e.target.classList.contains("navBtnOpen")) {
+    menu.open();
+  } else {
+    menu.close();
   }
 });
 
-function closeMenu() {
-  menu.classList.add("mainNavClosed");
-  navBtn.classList.remove("navBtnClose");
-  navBtn.classList.add("navBtnOpen");
-}
-
-function openMenu() {
-  menu.classList.remove("mainNavClosed");
-  navBtn.classList.remove("navBtnOpen");
-  navBtn.classList.add("navBtnClose");
-}
-
-closeMenu();
+menu.close();
