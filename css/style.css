@@ -436,6 +436,10 @@ footer {
     width: 100%;
   }
 
+  .mainNavClosed{
+    display: none !important;
+  }
+
   .mainHeader {
     display: flex;
     flex-direction: column;

@@ -1,3 +1,11 @@
+function getComparer(prop, reverse) {
+  return function (a, b) {
+    if (a[prop] < b[prop]) return reverse ? 1 : -1;
+    if (a[prop] > b[prop]) return reverse ? -1 : 1;
+    return 0;
+  }
+}
+
 const skills = {
   data: [
     { skill: "Java", level: 70, icon: "java.svg" },
@@ -33,18 +41,19 @@ const skills = {
     });
   },
 
-  sortList(prop) {
-    this.sortOrder[prop] = !this.sortOrder[prop];
-    this.data.sort(this.getComparer(prop, this.sortOrder[prop]));
-    this.generateList(this.skillList);
-  },
-
-  getComparer(prop, reverse) {
-    return function (a, b) {
-      if (a[prop] < b[prop]) return reverse ? 1 : -1;
-      if (a[prop] > b[prop]) return reverse ? -1 : 1;
-      return 0;
+ sortList(prop) {
+    if (this.currentSortProp === prop) {
+      this.data.reverse();
+      this.sortOrder[prop] = !this.sortOrder[prop];
+    } else {
+      for (let key in this.sortOrder) {
+        this.sortOrder[key] = false;
+      }
+      this.sortOrder[prop] = true;
+      this.data.sort(getComparer(prop, this.sortOrder[prop]));
+      this.currentSortProp = prop;
     }
+    this.generateList(this.skillList);
   }
 };
 
@@ -67,3 +76,30 @@ buttons.addEventListener("click", (e) => {
     }
   }
 });
+
+let menu = document.querySelector("nav.mainNav");
+let navBtn = document.querySelector("button.navBtn");
+
+navBtn.addEventListener("click", (e) => {
+  if(e.target.classList.contains('navBtnOpen')){
+    openMenu();
+  }
+  else
+  {
+    closeMenu();
+  }
+});
+
+function closeMenu() {
+  menu.classList.add("mainNavClosed");
+  navBtn.classList.remove("navBtnClose");
+  navBtn.classList.add("navBtnOpen");
+}
+
+function openMenu() {
+  menu.classList.remove("mainNavClosed");
+  navBtn.classList.remove("navBtnOpen");
+  navBtn.classList.add("navBtnClose");
+}
+
+closeMenu();
