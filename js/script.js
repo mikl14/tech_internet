@@ -84,12 +84,14 @@ menu.open = function() {
   this.classList.remove("mainNavClosed");
   navBtn.classList.remove("navBtnOpen");
   navBtn.classList.add("navBtnClose");
+  navBtn.querySelector(".visuallyHidden").textContent = "Закрыть меню";
 };
 
 menu.close = function() {
   this.classList.add("mainNavClosed");
   navBtn.classList.remove("navBtnClose");
   navBtn.classList.add("navBtnOpen");
+  navBtn.querySelector(".visuallyHidden").textContent = "Открыть меню";
 };
 
 navBtn.addEventListener("click", (e) => {
