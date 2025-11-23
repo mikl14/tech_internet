@@ -84,14 +84,14 @@ menu.open = function() {
   this.classList.remove("mainNavClosed");
   navBtn.classList.remove("navBtnOpen");
   navBtn.classList.add("navBtnClose");
-  navBtn.querySelector(".visuallyHidden").textContent = "Закрыть меню";
+  navBtn.querySelector(".navBtnNone").textContent = "Закрыть меню";
 };
 
 menu.close = function() {
   this.classList.add("mainNavClosed");
   navBtn.classList.remove("navBtnClose");
   navBtn.classList.add("navBtnOpen");
-  navBtn.querySelector(".visuallyHidden").textContent = "Открыть меню";
+  navBtn.querySelector(".navBtnNone").textContent = "Открыть меню";
 };
 
 navBtn.addEventListener("click", (e) => {
@@ -103,3 +103,28 @@ navBtn.addEventListener("click", (e) => {
 });
 
 menu.close();
+
+const checkbox = document.querySelector('.switchCheckbox');
+const body = document.body;
+
+function applyTheme(isChecked) {
+  if (isChecked) {
+    body.classList.remove('dark-theme');
+  } else {
+    body.classList.add('dark-theme');
+  }
+  checkbox.checked = isChecked;
+}
+
+const savedTheme = localStorage.getItem('themeIsChecked');
+if (savedTheme !== null) {
+  applyTheme(savedTheme === 'true');
+} else {
+  applyTheme(true);
+}
+
+checkbox.addEventListener('change', () => {
+  const isChecked = checkbox.checked;
+  applyTheme(isChecked);
+  localStorage.setItem('themeIsChecked', isChecked.toString());
+});
