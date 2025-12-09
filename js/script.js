@@ -116,15 +116,15 @@ function applyTheme(isChecked) {
   checkbox.checked = isChecked;
 }
 
-const savedTheme = localStorage.getItem('themeIsChecked');
+const savedTheme = localStorage.getItem('theme');
 if (savedTheme !== null) {
-  applyTheme(savedTheme === 'true');
+  applyTheme(savedTheme === 'dark');
 } else {
   applyTheme(true);
 }
 
 checkbox.addEventListener('change', () => {
-  const isChecked = checkbox.checked;
-  applyTheme(isChecked);
-  localStorage.setItem('themeIsChecked', isChecked.toString());
+  const theme = checkbox.checked ? 'dark' : 'light';
+  applyTheme(checkbox.checked);
+  localStorage.setItem('theme', theme);
 });

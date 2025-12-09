@@ -91,11 +91,29 @@ body {
 }
 
 .navBtnNone {
-  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .visuallyHidden {
-  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .avaRounded {
@@ -407,11 +425,12 @@ dt {
   margin-top: 120px;
   padding-top: 50px;
   padding-bottom: 50px;
-  color: var(--bg-color);
+  color: var(--white);
 }
 
 .dark-theme .mainFooter {
   color: var(--bg-color);
+  background: var(--green);
 }
 
 footer {
