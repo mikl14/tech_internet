@@ -1,0 +1,6 @@
+[
+  { "skill": "Java", "level": 70, "icon": "java.svg" },
+  { "skill": "C#", "level": 30, "icon": "Csharp.svg" },
+  { "skill": "C++", "level": 30, "icon": "cpp.svg" },
+  { "skill": "CSS", "level": 5, "icon": "css.svg" }
+]

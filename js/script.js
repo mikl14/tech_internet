@@ -7,12 +7,7 @@ function getComparer(prop, reverse) {
 }
 
 const skills = {
-  data: [
-    { skill: "Java", level: 70, icon: "java.svg" },
-    { skill: "C#", level: 30, icon: "Csharp.svg" },
-    { skill: "C++", level: 30, icon: "cpp.svg" },
-    { skill: "CSS", level: 5, icon: "css.svg" }
-  ],
+  data: [],
 
   sortOrder: {
     skill: false,
@@ -41,7 +36,7 @@ const skills = {
     });
   },
 
- sortList(prop) {
+  sortList(prop) {
     if (this.currentSortProp === prop) {
       this.data.reverse();
       this.sortOrder[prop] = !this.sortOrder[prop];
@@ -54,9 +49,32 @@ const skills = {
       this.currentSortProp = prop;
     }
     this.generateList(this.skillList);
-  }
-};
+  },
 
+getData(path) {
+    fetch(path)
+        .then(data => data.json())
+        .then(object => {
+            this.data = object;
+            
+            if (this.skillList) {
+                this.generateList(this.skillList);
+            }
+        })
+        .catch(error => {
+            console.error('Что-то пошло не так:', error);
+            this.data = [];
+            
+            const skillsSection = document.querySelector('section.skills');
+            if (skillsSection) {
+                skillsSection.classList.add('visuallyHidden');
+            }
+        });
+}
+
+
+};
+skills.getData('db/skills.json');
 skills.skillList = document.querySelector("dl.skillList");
 skills.generateList(skills.skillList);
 
@@ -77,32 +95,44 @@ buttons.addEventListener("click", (e) => {
   }
 });
 
-let menu = document.querySelector("nav.mainNav");
-let navBtn = document.querySelector("button.navBtn");
-
-menu.open = function() {
-  this.classList.remove("mainNavClosed");
-  navBtn.classList.remove("navBtnOpen");
-  navBtn.classList.add("navBtnClose");
-  navBtn.querySelector(".navBtnNone").textContent = "Закрыть меню";
+const menuController = {
+    menu: document.querySelector("nav.mainNav"),
+    navBtn: document.querySelector("button.navBtn"),
+    
+    open() {
+        if (this.menu) {
+            this.menu.classList.remove("mainNavClosed");
+            this.navBtn.classList.remove("navBtnOpen");
+            this.navBtn.classList.add("navBtnClose");
+            const hiddenText = this.navBtn.querySelector(".visuallyHidden");
+            if (hiddenText) {
+                hiddenText.textContent = "Закрыть меню";
+            }
+        }
+    },
+    
+    close() {
+        if (this.menu) {
+            this.menu.classList.add("mainNavClosed");
+            this.navBtn.classList.remove("navBtnClose");
+            this.navBtn.classList.add("navBtnOpen");
+            const hiddenText = this.navBtn.querySelector(".visuallyHidden");
+            if (hiddenText) {
+                hiddenText.textContent = "Открыть меню";
+            }
+        }
+    }
 };
 
-menu.close = function() {
-  this.classList.add("mainNavClosed");
-  navBtn.classList.remove("navBtnClose");
-  navBtn.classList.add("navBtnOpen");
-  navBtn.querySelector(".navBtnNone").textContent = "Открыть меню";
-};
-
-navBtn.addEventListener("click", (e) => {
-  if (e.target.classList.contains("navBtnOpen")) {
-    menu.open();
-  } else {
-    menu.close();
-  }
+menuController.navBtn?.addEventListener("click", (e) => {
+    if (e.target.classList.contains("navBtnOpen")) {
+        menuController.open();
+    } else {
+        menuController.close();
+    }
 });
 
-menu.close();
+menuController.close();
 
 const checkbox = document.querySelector('.switchCheckbox');
 const body = document.body;
@@ -118,13 +148,13 @@ function applyTheme(isChecked) {
 
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme !== null) {
-  applyTheme(savedTheme === 'dark');
+  applyTheme(savedTheme === 'light');
 } else {
   applyTheme(true);
 }
 
 checkbox.addEventListener('change', () => {
-  const theme = checkbox.checked ? 'dark' : 'light';
+  const theme = checkbox.checked ? 'light' : 'dark';
   applyTheme(checkbox.checked);
   localStorage.setItem('theme', theme);
 });
